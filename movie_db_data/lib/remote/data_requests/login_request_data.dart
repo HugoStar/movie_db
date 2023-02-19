@@ -4,7 +4,7 @@ class LoginRequestData {
   LoginRequestData({
     required this.username,
     required this.password,
-    // required this.token,
+    this.token,
   });
 
   ///Логин
@@ -13,13 +13,13 @@ class LoginRequestData {
   ///Пароль
   String password;
 
-  // ///Токен
-  // String token;
+  ///Токен
+  String? token;
 
   ///Конвертация в json
   Map<String, dynamic> toJson() => {
         'username': username,
         'password': password,
-        // 'request_token': token,
+        'request_token': token,
       };
 }
